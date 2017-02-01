@@ -1,0 +1,21 @@
+<ActionBar title="tabView"></ActionBar>
+
+  <TabView >
+    <StackLayout *tabItem="{title: 'Profile', iconSource: ''}" >
+        <ListView [items]='items'>
+            <template let-item='item'>
+                <Label [text]="name.item"></Label>
+            </template>
+        </ListView>
+        <TabViewItem xmlns:Tab1="mainTabs/tabOne">
+
+        </TabViewItem>
+        <Label text="First tab item" textWrap="true"></Label>
+    </StackLayout>
+    <StackLayout *tabItem="{title: 'Stats'}" class="tab2">
+        <Label text="Second tab item"></Label>
+    </StackLayout>
+    <StackLayout *tabItem="{title: 'Settings'}" class="tab3">
+        <Label text="Third tab item"></Label>
+    </StackLayout>
+</TabView>
